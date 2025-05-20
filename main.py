@@ -14,7 +14,7 @@ def multiply(x, y):
     print x*y
     return x * y
 
-#Need to define divide function.
+# This function divides two numbers
 def divide (x,y):
     print x/y
     return x/y
@@ -30,7 +30,7 @@ print("4.Divide")
 
 while True:
     # take input from the user
-    choice = input("Enter choice(1/2/3): ")
+    choice = input("Enter choice(1/2/3/4): ")
 
     # check if choice is one of the four options
     if choice in ('1', '2', '3', '4'):
@@ -46,8 +46,11 @@ while True:
         elif choice == '3':
             print(num1, "*", num2, "=", multiply(num1, num2))
             
-        elif choice =='4':
-            print(num1, "/", num2, "=", divide(num1,num2))
+        elif choice == '4':
+            if num2 != 0:
+                print(num1, "/", num2, "=", divide(num1,num2))
+            else:
+                print("Division by zero is not allowed.")
             
 
         # check if user wants another calculation
